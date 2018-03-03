@@ -26,6 +26,8 @@ gem 'kaminari'                 # ページャ
 gem 'rails_autolink'           # URLの自動リンク化
 gem 'cocoon'                   # 1対多子要素の一括更新
 gem 'ransack'                  # 検索フォーム生成
+gem 'i18n_generators'          # locale ファイル生成
+gem 'i18n-tasks'               # locale ファイルの整理整頓
 
 # Authentication
 gem 'omniauth'
@@ -36,8 +38,6 @@ gem 'pundit'
 gem 'carrierwave'              # 画像アップローダ
 gem 'mini_magick'              # CarrierWaveでリサイズなどができるようになる
 gem 'fog'                      # CarrierWaveでAmazon S3に保存できるようになる
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
