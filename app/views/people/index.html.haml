@@ -1,23 +1,21 @@
 %h1 Listing people
 
-%table.table
-  %thead
-    %tr
-      %th{ scope:'col' } Name
-      %th{ scope:'col' } Description
-      %th{ scope:'col' }
-      %th{ scope:'col' }
-      %th{ scope:'col' }
-
-  %tbody
+%div
+  %div.row.header
+    %div.col-sm Name
+    %div.col-sm  Description
+    %div.col-sm
+    %div.col-sm
+    %div.col-sm
+  %div.body
     - @people.each do |person|
-      %tr
-        %td= person.name
-        %td= person.description
-        %td= link_to 'Show', person
-        %td= link_to 'Edit', edit_person_path(person)
-        %td= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' }
+      %div.row
+        %div.col-sm= person.name
+        %div.col-sm= person.description
+        %div.col-sm= link_to 'Show', person
+        %div.col-sm= link_to 'Edit', edit_person_path(person)
+        %div.col-sm= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' }
+  %div.row.footer
 
 %br
-
-= link_to 'New Person', new_person_path
+= link_to 'New Person', new_person_path, class: 'btn btn-raised btn-primary'
