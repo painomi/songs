@@ -1,9 +1,7 @@
-@import "material";
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "bootstrap";
 
 /* form */
 input[type="submit"] {
   @extend .btn;
-  @extend .btn-raised;
   @extend .btn-primary;
 }

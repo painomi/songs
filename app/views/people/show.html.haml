@@ -3,6 +3,8 @@
 - if notice.present?
   %div.row.alert-success.alert#notice{role: 'alert'}
     = notice
+    %button.close.pull-right{ type:"button", class:"close", 'data-dismiss':"alert", 'aria-label':"Close"}
+      %span{'aria-hidden':"true"} &times;
 
 %dl.row
   %dt.col-sm-12.text-secondary= Person.human_attribute_name(:name)
@@ -11,5 +13,5 @@
   %dt.col-sm-12.text-secondary= Person.human_attribute_name(:description)
   %dd.col-sm-12= @person.description
 
-= link_to t('view.edit'), edit_person_path(@person), class: 'btn btn-raised btn-primary'
-= link_to t('view.back'), people_path, class: 'btn btn-raised btn-primary'
+= link_to t('view.edit'), edit_person_path(@person), class: 'btn btn-primary'
+= link_to t('view.back'), people_path, class: 'btn btn-primary'
