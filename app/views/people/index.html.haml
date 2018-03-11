@@ -10,6 +10,7 @@
     - @people.each do |person|
       %div.row
         %div.col-sm-9= person.name
+<<<<<<< HEAD
         %div.col-sm-1= link_to t('view.show'), person, class: 'btn btn-raised btn-primary'
         %div.col-sm-1= link_to t('view.edit'), edit_person_path(person), class: 'btn btn-raised btn-primary'
         %div.col-sm-1= link_to t('view.destroy'), person, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-raised btn-primary'
@@ -17,3 +18,12 @@
 
 %br
 = link_to t('view.new'), new_person_path, class: 'btn btn-raised btn-primary'
+=======
+        %div.col-sm-1= link_to t('view.show'), person, class: 'btn btn-primary'
+        %div.col-sm-1= link_to t('view.edit'), edit_person_path(person), class: 'btn btn-primary'
+        %div.col-sm-1= link_to t('view.destroy'), person, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary'
+  %div.row.footer
+
+%br
+= link_to t('view.new'), new_person_path, class: 'btn btn-primary'
+>>>>>>> refactor_scss
