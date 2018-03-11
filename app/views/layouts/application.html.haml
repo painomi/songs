@@ -3,10 +3,19 @@
   %head
     %title Songs
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css', crossorigin: 'anonymous'
     = stylesheet_link_tag 'https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css', media: 'all', integrity: 'sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX', crossorigin: 'anonymous'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .container-fluid
+      %ul.nav.nav-tabs
+        %li.nav-item
+          %a.nav-link.active{href: '#'} Active
+        %li.nav-item
+          %a.nav-link{href: '#'} Link
+        %li.nav-item
+          %a.nav-link{href: '#'} Link
+        %li.nav-item
+          %a.nav-link{href: '#'} Link
       = yield

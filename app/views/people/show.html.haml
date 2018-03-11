@@ -1,12 +1,15 @@
-%p#notice= notice
+= render partial: 'breadcrumb', locals: { page_name: t('view.show') }
 
-%p
-  %b Name:
-  = @person.name
-%p
-  %b Description:
-  = @person.description
+- if notice.present?
+  %div.row.alert-success.alert#notice{role: 'alert'}
+    = notice
 
-= link_to 'Edit', edit_person_path(@person)
-\|
-= link_to 'Back', people_path
+%dl.row
+  %dt.col-sm-12.text-secondary= Person.human_attribute_name(:name)
+  %dd.col-sm-12= @person.name
+%dl.row
+  %dt.col-sm-12.text-secondary= Person.human_attribute_name(:description)
+  %dd.col-sm-12= @person.description
+
+= link_to t('view.edit'), edit_person_path(@person), class: 'btn btn-raised btn-primary'
+= link_to t('view.back'), people_path, class: 'btn btn-raised btn-primary'
