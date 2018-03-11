@@ -1,7 +1,15 @@
-%h1 Editing person
+-# frozen_string_literal: true
+= render partial: 'breadcrumb', locals: { page_name: t('view.edit') }
 
-= render 'form'
+= simple_form_for(@person) do |f|
+  = f.error_notification
 
-= link_to 'Show', @person
-\|
-= link_to 'Back', people_path
+  .form-inputs
+    = f.input :name
+    = f.input :description
+
+  .form-actions
+    = f.button :submit
+    - if @person.persisted?
+      = link_to t('view.show'), @person, class: 'btn btn-raised btn-primary'
+    = link_to t('view.back'), people_path, class: 'btn btn-raised btn-primary'
