@@ -1,9 +1,9 @@
 ja:
   activerecord:
     models:
-      person: 人  #g
+      person: 人物
 
     attributes:
       person:
-        description: 説明  #g
-        name: 名  #g
+        description: 説明
+        name: 名前

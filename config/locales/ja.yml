@@ -1,5 +1,12 @@
 ---
 ja:
+  view:
+    show: 参照
+    edit: 編集
+    new: 新規作成
+    index: 一覧
+    back: 戻る
+    destroy: 削除
   activerecord:
     errors:
       messages:
