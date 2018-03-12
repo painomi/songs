@@ -1,9 +1,8 @@
 -# frozen_string_literal: true
-= render partial: 'breadcrumb', locals: { page_name: t('view.edit') }
+- page_name= @person.persisted? ? t('view.edit') : t('view.new')
+= render partial: 'breadcrumb', locals: { page_name: page_name }
 
 = simple_form_for(@person) do |f|
-  = f.error_notification
-
   .form-inputs
     = f.input :name
     = f.input :description
@@ -11,5 +10,5 @@
   .form-actions
     = f.button :submit
     - if @person.persisted?
-      = link_to t('view.show'), @person, class: 'btn btn-raised btn-primary'
-    = link_to t('view.back'), people_path, class: 'btn btn-raised btn-primary'
+      = link_to t('view.show'), @person, class: 'btn btn-primary'
+    = link_to t('view.back'), people_path, class: 'btn btn-primary'
