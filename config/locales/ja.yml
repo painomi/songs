@@ -7,6 +7,8 @@ ja:
     index: 一覧
     back: 戻る
     destroy: 削除
+  messages:
+    are_you_sure_to_delete: '削除してよろしいですか'
   activerecord:
     errors:
       messages:

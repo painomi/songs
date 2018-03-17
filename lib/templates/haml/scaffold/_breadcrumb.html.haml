@@ -1,0 +1,14 @@
+%nav{'aria-label': "breadcrumb"}
+  %ol.breadcrumb
+    - if controller.action_name== 'index'
+      %li.breadcrumb-item.active
+        = <%= class_name %>.model_name.human
+    - else
+      %li.breadcrumb-item
+        = link_to <%= class_name %>.model_name.human, <%= plural_table_name %>_path
+    - unless controller.action_name== 'index'
+      %li.breadcrumb-item.active{'aria-current':"page"}
+        = @<%= singular_table_name %>.name
+        (
+        = page_name
+        )
