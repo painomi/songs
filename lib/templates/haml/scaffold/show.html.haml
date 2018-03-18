@@ -8,8 +8,8 @@
 
 <% for attribute in attributes -%>
 %dl.row
-  %dt.col-sm-12.text-secondary= <%= class_name %>.human_attribute_name(:<%= attribute %>)
-  %dd.col-sm-12= @<%= singular_table_name %>.<%= attribute %>
+  %dt.col-sm-12.text-secondary= <%= class_name %>.human_attribute_name(:<%= attribute.name %>)
+  %dd.col-sm-12= @<%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
 
 = link_to t('view.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'btn btn-primary'

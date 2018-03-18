@@ -2,8 +2,14 @@ ja:
   activerecord:
     models:
       person: 人物
-
+      song: 曲
     attributes:
       person:
         description: 説明
         name: 名前
+      song:
+        name: 曲名
+        description: 説明
+        lyricist: 作詞
+        composer: 作曲
+        arranger: 編曲
