@@ -70,6 +70,7 @@ class AlbumsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def album_params
-      params.require(:album).permit(:name, :description, :artist_id, :publish_at, :media_type, :release_type, :production_type)
+      params.require(:album).permit(:name, :description, :artist_id, :publish_at, :media_type, :release_type, :production_type,
+        tracks_attributes: Track::NESTED_ALLOWED_PARAMS)
     end
 end

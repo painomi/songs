@@ -20,3 +20,10 @@
       = f.input :media_type, collection: Album.media_types_i18n
       = f.input :release_type, collection: Album.release_types_i18n
       = f.input :production_type, collection: Album.production_types_i18n
+    .row
+      .col
+        = link_to_add_association t('view.add'), f, :tracks, class: 'btn btn-primary', data:{'association-insertion-node'=> 'div#tracks', 'association-insertion-method'=> 'prepend'}
+    .row
+      .col{ id: 'tracks'}
+        = f.simple_fields_for :tracks do |track|
+          = render partial: 'track_fields', locals: { f: track }

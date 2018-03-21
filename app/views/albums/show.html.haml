@@ -6,6 +6,9 @@
     %button.close{ type:"button", 'data-dismiss':"alert", 'aria-label':"Close"}
       %span{'aria-hidden':"true"} &times;
 
+= link_to t('view.edit'), edit_album_path(@album), class: 'btn btn-primary'
+= link_to t('view.back'), albums_path, class: 'btn btn-primary'
+
 %dl.row
   %dt.col-sm-1.text-secondary= Album.human_attribute_name(:name)
   %dd.col-sm-11= @album.name
@@ -23,6 +26,9 @@
   %dd.col-sm-3= @album.release_type_i18n
   %dt.col-sm-1.text-secondary= Album.human_attribute_name(:production_type)
   %dd.col-sm-3= @album.production_type_i18n
-
-= link_to t('view.edit'), edit_album_path(@album), class: 'btn btn-primary'
-= link_to t('view.back'), albums_path, class: 'btn btn-primary'
+.tracks
+  - @album.tracks.each do |track|
+    .row
+      .col-1= track.number
+      .col-3= track.song.name
+      .col-8= track.description

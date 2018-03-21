@@ -6,6 +6,7 @@ class Album < ApplicationRecord
 
   validates :name, presence: true
   belongs_to :artist, class_name: 'Person'
-
+  has_many :tracks, dependent: :destroy
+  accepts_nested_attributes_for :tracks, allow_destroy: true
 
 end
