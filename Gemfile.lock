@@ -91,6 +91,8 @@ GEM
     easy_translate (0.5.1)
       thread
       thread_safe
+    enum_help (0.0.17)
+      activesupport (>= 3.0.0)
     erubi (1.7.0)
     erubis (2.7.0)
     excon (0.60.0)
@@ -547,6 +549,7 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.2)
   database_cleaner
+  enum_help
   factory_bot_rails
   faker
   fog

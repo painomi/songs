@@ -27,6 +27,7 @@ gem 'cocoon'                   # 1対多子要素の一括更新
 gem 'ransack'                  # 検索フォーム生成
 gem 'i18n_generators'          # locale ファイル生成
 gem 'i18n-tasks'               # locale ファイルの整理整頓
+gem 'enum_help'                # enum の i18n
 
 # Authentication
 gem 'omniauth'
