@@ -14,13 +14,13 @@
   %dd.col-sm-12= @song.description
 %dl.row
   %dt.col-sm-12.text-secondary= Song.human_attribute_name(:lyricist)
-  %dd.col-sm-12= @song.lyricist.name
+  %dd.col-sm-12= @song.lyricist
 %dl.row
   %dt.col-sm-12.text-secondary= Song.human_attribute_name(:composer)
-  %dd.col-sm-12= @song.composer.name
+  %dd.col-sm-12= @song.composer
 %dl.row
   %dt.col-sm-12.text-secondary= Song.human_attribute_name(:composer)
-  %dd.col-sm-12= @song.arranger.name
+  %dd.col-sm-12= @song.arranger
 
 = link_to t('view.edit'), edit_song_path(@song), class: 'btn btn-primary'
 = link_to t('view.back'), songs_path, class: 'btn btn-primary'
